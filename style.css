@@ -1,13 +1,15 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
-body{
+
+body {
     background: rgb(25, 24, 92);
 }
-.app{
+
+.app {
     background: white;
     width: 90%;
     max-width: 600px;
@@ -15,22 +17,26 @@ body{
     border-radius: 10px;
     padding: 30px;
 }
-.app h1{
+
+.app h1 {
     font-size: 25px;
     font-weight: 700;
     color: #3c63cc;
     border-bottom: 2px solid #3c63cc;
     padding-bottom: 30px;
 }
-.quiz{
+
+.quiz {
     padding: 20px 0;
 }
-.quiz h2{
+
+.quiz h2 {
     font-size: 20px;
     font-weight: 600;
     color: #3c63cc;
 }
-.btn{
+
+.btn {
     color: #000000;
     background: white;
     font-weight: 500;
@@ -43,11 +49,18 @@ body{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.btn:hover{
+
+.btn:hover:not([disabled]) {
     background: #3c63cc;
     border: 1px solid #3c63cc;
 }
-#next-btn{
+
+.btn[disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+#next-btn {
     background: #3c63cc;
     color: #ffffff;
     font-weight: 500;
@@ -56,6 +69,16 @@ body{
     padding: 10px;
     margin: 20px auto 0;
     border-radius: 4px;
-    cursor: pointer;display: block;
+    cursor: pointer;
     display: none;
+}
+.correct {
+    background: #4caf50;
+    border: 1px solid #4caf50;
+    color: white;
+}
+.incorrect {
+    background: #f44336;
+    border: 1px solid #f44336;
+    color: white;
 }
